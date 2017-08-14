@@ -1,4 +1,5 @@
 import {Component, OnDestroy, OnInit, Output} from '@angular/core';
+import {Recipe} from './recipe.model';
 
 @Component({
   selector: 'app-recipes',
@@ -7,6 +8,8 @@ import {Component, OnDestroy, OnInit, Output} from '@angular/core';
 })
 export class RecipesComponent implements OnInit, OnDestroy {
   @Output() recipesActive: boolean;
+  selectedRecipe: Recipe;
+
   constructor() { }
 
   ngOnInit() {
